@@ -11,16 +11,16 @@
                     <h1 class="mb-3">Seja Bem Vindo</h1>
                     <p class="mb-5">Estamos trabalhando cada vez mais para facilitarmos sua vida.</p>
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
-                        @csrf
+                        {{csrf_field()}}
                         <div class="input-group input-group-newsletter">
                             <div>
                                 Seu email
                                 <p>
-                                    <input type="email" class="form-control" placeholder="Digite seu email..." id="email" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input type="email" class="form-control" placeholder="Digite seu email..." id="email" name="email">
                                 </p>
                                 @if($errors->has('email'))
                                 <span class="error-message">
-                                {{$errors->first('email')}}<br>
+                                    {{$errors->first('email')}}<br>
                                 </span>
                                 @endif
                                 Sua Senha

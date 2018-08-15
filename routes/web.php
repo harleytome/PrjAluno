@@ -12,17 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return redirect()->route('login');
 });
 
 //Route::get('lostpassword','LostPasswordController@index')->name('lostpassword');
 Route::get('register','RegisterController@index')->name('register');
 
 Route::group(['middleware' => ['auth']],function(){
-    Route::post('login','MainController@index')->name('login');
-    Route::post('store','MainController@store')->name('store');
     Route::get('home','HomeController@index')->name('home');
     Route::get('main','MainController@index')->name('main');
+    Route::get('myinfo','StudantController@index')->name('myinfo');
 });
 
 Auth::routes();
