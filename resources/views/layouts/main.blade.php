@@ -2,5 +2,6 @@
 
 @section('content')
 
-oi
+<h3>Painel</h3>
+
 @endsection

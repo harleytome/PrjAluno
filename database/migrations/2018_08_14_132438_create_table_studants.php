@@ -17,13 +17,13 @@ class CreateTableStudants extends Migration
         Schema::create('studants',function(Blueprint $table){
           $table->increments('id');
           $table->integer('id_user')->references('id')->on('users');
-          $table->integer('id_school')->references('id')->on('schools');
+          $table->integer('id_school')->nullable(); //->references('id')->on('schools');
           $table->string('photo');
-          $table->string('alias');
+          $table->string('alias')->nullable();
           $table->char('use_alias')->default('N');
-          $table->date('birthdate');
-          $table->string('class_name');
-          $table->integer('current_year');
+          $table->date('birthdate')->nullable();
+          $table->string('class_name')->nullable();
+          $table->integer('current_year')->nullable();
         });
     }
 

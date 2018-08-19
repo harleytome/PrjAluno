@@ -13,4 +13,6 @@ class School extends Model
         "principal_name","phone","created_at",
         "timestamp","updated_at"
     ];
+
+    protected $tablename = "schools";
 }

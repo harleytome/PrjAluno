@@ -11,4 +11,6 @@ class Studant extends Model
         "id_user","id_school","photo","alias","use_alias","birthdate","class_name","current_year"
     ];
 
+    protected $tablename = 'studants';
+
 }

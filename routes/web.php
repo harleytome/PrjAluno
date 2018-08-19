@@ -23,6 +23,9 @@ Route::group(['middleware' => ['auth']],function(){
     Route::get('home','HomeController@index')->name('home');
     Route::get('main','MainController@index')->name('main');
     Route::get('myinfo','StudantController@index')->name('myinfo');
+    Route::post('myinfo.store','StudantController@store')->name('myinfo.store');
+    Route::post('myphoto.select','MyPhotoController@select')->name('myphoto.select');
+    Route::post('myphoto.save/{id}','MyPhotoController@save')->name('myphoto.save');
 });
 
 Auth::routes();
