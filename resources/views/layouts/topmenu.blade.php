@@ -39,6 +39,12 @@
                 <li>
                     <a href="{{ route('myinfo') }}">Meus Dados</a>
                 </li>
+                <li>
+                    <a href="{{ route('myclasses') }}">Suas Matérias</a>
+                </li>
+                <li>
+                    <a href="#">Calendário de Aulas</a>
+                </li>
             </ul>
         </nav>
 

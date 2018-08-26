@@ -26,6 +26,12 @@ Route::group(['middleware' => ['auth']],function(){
     Route::post('myinfo.store','StudantController@store')->name('myinfo.store');
     Route::post('myphoto.select','MyPhotoController@select')->name('myphoto.select');
     Route::post('myphoto.save/{id}','MyPhotoController@save')->name('myphoto.save');
+    Route::get('myclasses','ClassesController@index')->name('myclasses');
+    Route::get('myclasses.add','ClassesController@add')->name('myclasses.add');
+    Route::post('myclasses.store','ClassesController@store')->name('myclasses.store');
+    Route::get('myclasses.delete/{id}','ClassesController@delete')->name('myclasses.delete');
+    Route::get('myclasses.edit/{id}','ClassesController@edit')->name('myclasses.edit');
+    Route::post('myclasses.update/{id}','ClassesController@update')->name('myclasses.update');
 });
 
 Auth::routes();

@@ -13,4 +13,11 @@ class Studant extends Model
 
     protected $tablename = 'studants';
 
+    /*
+    Define os mutators
+    */
+    public function setClassNameAttribute($value)
+    {
+        $this->attributes['class_name'] = strtoupper($value);
+    }
 }
